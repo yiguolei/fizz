@@ -17,7 +17,8 @@ namespace fizz {
 
 struct ChaCha20Poly1305 {
   static const EVP_CIPHER* Cipher() {
-#if FOLLY_OPENSSL_HAS_CHACHA
+// #if FOLLY_OPENSSL_HAS_CHACHA
+#if 0
     return EVP_chacha20_poly1305();
 #else
     throw std::runtime_error(
